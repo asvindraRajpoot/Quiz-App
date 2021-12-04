@@ -1,0 +1,357 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: aliceblue;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.error {
+  text-align: center;
+  margin-top: 5rem;
+}
+a {
+  text-decoration: none;
+}
+header {
+  background-color: navy;
+  padding: 1.3rem;
+}
+.nav-list a {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.yellow {
+  color: rgb(228, 201, 114);
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+}
+.about a {
+  margin: 0 0.4rem;
+}
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 15rem;
+  text-shadow: 0.2rem 0.2rem 0.5rem black;
+}
+.goto {
+  background-color: black;
+  text-align: center;
+  padding: 0.7rem 1.4rem;
+  color: whitesmoke;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgb(60, 116, 116);
+}
+.goto-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 2.7rem;
+  margin-top: 3rem;
+  text-align: center;
+  text-shadow: 0.2rem 0.2rem 0.8rem black;
+  font-weight: bold;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 3rem;
+}
+.loader span {
+  font-weight: bold;
+  text-shadow: 0.2rem 0.2rem 0.8rem black;
+}
+.categories {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+.cat {
+  width: 20%;
+  background-color: green;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  color: whitesmoke;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgb(101, 192, 157);
+}
+
+.level1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.level {
+  font-size: 1.3rem;
+  background-color: rgb(241, 69, 69);
+  color: whitesmoke;
+  margin: 1rem 0.3rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgb(218, 159, 159);
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.start button {
+  padding: 0.3rem 2rem;
+  background-color: gray;
+  border: unset;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  font-weight: bold;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgb(155, 154, 154);
+}
+.active {
+  background-color: black;
+  color: whitesmoke;
+  box-shadow: 0.1rem 0.1rem 0.9rem 0.2rem rgb(150, 149, 149);
+}
+
+progress {
+  appearance: none;
+}
+progress::-webkit-progress-bar {
+  background-color: gainsboro;
+  border-radius: .2rem;
+}
+
+progress::-webkit-progress-bar-value {
+  background-color: #37B667;
+  border-radius: .2rem;
+}
+
+.ques{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    border: .1rem solid gainsboro;
+    padding: 1rem;
+    border-radius: .2rem;
+}
+
+.first-ques{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.progress{
+    display: flex;
+    flex-direction: column;
+}
+.progress progress{
+    width: 60%;
+    height: .5rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+h5{
+    font-size: 2.5rem;
+    margin: .5rem 0;
+}
+
+.next{
+    display: flex;
+    justify-content: flex-end;
+}
+.next button{
+    padding: .7rem 2rem;
+    background-color: #37B667;
+    border-radius: .2rem;
+    border: unset;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.clickedAns{
+    background-color: #37B667;
+    color: white;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.result-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.result-header button{
+    padding: .5rem 2rem;
+    background-color: #37B667;
+    border: unset;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: .2rem;
+    font-weight: bold;
+}
+h3{
+    font-size: 2rem;
+}
+
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+td,th{
+    border: 1px solid black;
+    padding: 1.2rem;
+    /* outline: 1px solid black; */
+}
+.result-table{
+    display: flex;
+    justify-content: center;
+}
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+td[colSpan="2"]{
+    color: black;
+    font-weight: bold;
+}
