@@ -1,12 +1,13 @@
-function Error(){
-    return (
-        <div>
+import Header from "./Header";
 
-            <h2 className="error">
-                404 Page not found.
-            </h2>
-        </div>
-    )
+function Error() {
+  return (
+    <div>
+      <Header />
+
+      <h2 className="error">404 Page not found.</h2>
+    </div>
+  );
 }
 
 export default Error;

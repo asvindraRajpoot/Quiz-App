@@ -1,91 +1,62 @@
+import React from "react";
+import Footer from "./Footer";
+import Header from "./Header";
+
 function Result(props) {
-    console.log(props.reset, props.result);
-    return (
-        <section className="container">
-            <div className="result-header">
-                <h3>Result of the quiz</h3>
-                <div>
-                    <button>Retake Quiz</button>
-                </div>
-            </div>
-            <div className="result-table">
-                <table>
-                    <tr>
-                        <th>Question</th>
-                        <th>Correct Answers</th>
-                        <th>You Selected</th>
-                        <th>Right Or Wrong</th>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
+  var total = 0;
+  console.log(props);
+  const submittedAns = props.result.quiz;
+  const originalAns = props.allQues;
+  console.log("Submitted Ans:", submittedAns, "originalAns:", originalAns);
 
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td>ques1</td>
-                        <td>corr ans</td>
-                        <td>selec</td>
-                        <td>r or w</td>
-                    </tr>
-                    <tr>
-                        <td colSpan="2">Total</td>
-                        <td colSpan="2">4</td>
+  return (
+      <>
+      <Header/>
+    <section className="container">
+      <div className="result-header">
+        <h3>Result of the quiz</h3>
+        <div>
+          <button onClick={props.reset}>Retake Quiz</button>
+        </div>
+      </div>
+      <div className="result-table">
+        <table>
+          <tr>
+            <th>Question</th>
+            <th>Correct Answers</th>
+            <th>You Selected</th>
+            <th>Right Or Wrong</th>
+          </tr>
+          {originalAns.map((o, i) => {
+            if (o.correct_answer === submittedAns[i].answers[0]) {
+              total = total + 1;
+            }
 
-                    </tr>
-                </table>
-            </div>
-        </section>
-    );
+            return (
+              <tr>
+                <td>{o.question}</td>
+                <td>{o.correct_answer}</td>
+                <td>{submittedAns[i].answers[0]}</td>
+                <td>
+                  {o.correct_answer === submittedAns[i].answers[0] ? (
+                    <i class="far fa-check-circle"></i>
+                  ) : (
+                    <i class="far fa-times-circle"></i>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+          <tr>
+            <td colSpan="2">Total</td>
+            <td colSpan="2">{total}</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <Footer/>
+    </>
+  );
 }
 
 export default Result;

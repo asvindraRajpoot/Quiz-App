@@ -1,18 +1,11 @@
-import Header from './Components/Header';
-import Hero from './Components/Hero';
-import Home from './Components/Home';
-import Result from './Components/Result';
-
+import Hero from "./Components/Hero";
 
 function App() {
   return (
     <>
-       <Header/>
-       {/* <Home/> */}
-       {/* <Hero/> */}
-       <Result/>
+      <Hero />
     </>
-  )
+  );
 }
 
 export default App;

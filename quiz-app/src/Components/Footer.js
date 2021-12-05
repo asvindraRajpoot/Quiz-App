@@ -1,9 +1,13 @@
-function Footer(){
+function Footer() {
+
     return (
         <>
-          <nav>
-              <h1>Welcome to Footer</h1>
-          </nav>
+            <footer>
+                <center>
+                    <small>
+                        Copyright © 2021 - 2022 QuizTrivia Pvt. Ltd. All Rights Reserved.</small>
+                </center>
+            </footer>
         </>
     )
 }
